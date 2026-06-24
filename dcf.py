@@ -32,13 +32,3 @@ def run_dcf(base_fcf, fcf_growth, terminal_growth, wacc, shares):
         "Enterprise Value": round(enterprise_value, 2),
         "Price Per Share": round(price_per_share, 2)
     }
-
-result = run_dcf(
-    base_fcf=get_financials("AAPL"),
-    fcf_growth=0.10,
-    terminal_growth=0.025,
-    wacc=0.09,
-    shares=get_shares_outstanding("AAPL")
-)
-for key, value in result.items():
-    print(f"{key}: {value}")

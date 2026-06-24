@@ -11,7 +11,3 @@ def get_shares_outstanding(ticker_symbol):
     ticker = yf.Ticker(ticker_symbol)
     shares = ticker.info['sharesOutstanding']
     return shares
-
-
-print(get_financials("AAPL"))
-print(get_shares_outstanding("AAPL"))
